@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEO GYM | Built By Discipline. Defined By Strength.</title>
+  <meta name="description" content="Experience elite athletic performance at NEO GYM. Commercial heavy iron, high-capacity cardio arena, certified coaching, and real body transformations.">
+  <meta name="keywords" content="NEO GYM, gym, strength training, personal trainer, workout, cardio, bodybuilding, fitness center, Bangalore gym">
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NEO GYM | Built By Discipline. Defined By Strength.">
+  <meta property="og:description" content="Step into an uncompromising training atmosphere at NEO GYM. World-class heavy iron, precision cardio decks, and certified coaching.">
+  <meta property="og:image" content="assets/gym_interior_1.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" id="dynamicFavicon" type="image/png" href="favicon-32x32.png">
+  
+  <!-- Typography: Syne (Display) + Plus Jakarta Sans (Body) + Oswald (Data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Core Design System -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================== -->
+  <!-- A. PREMIUM NAVIGATION                          -->
+  <!-- ============================================== -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+      <a href="#home" class="logo" aria-label="NEO GYM Home">
+        <div class="logo-icon"><i class="fa-solid fa-dumbbell"></i></div>
+        <div class="logo-text">
+          <span class="brand-title">NEO GYM</span>
+          <span class="brand-tagline">STRENGTH &amp; PERFORMANCE</span>
+        </div>
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Primary Navigation">
+        <a href="#home" class="nav-item">Home</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#facilities" class="nav-item">Facilities</a>
+        <a href="workouts.html" class="nav-item">Workouts</a>
+        <a href="#videos" class="nav-item">Videos</a>
+        <a href="#plans" class="nav-item">Plans</a>
+        <a href="#trainers" class="nav-item">Trainers</a>
+        <a href="#gallery" class="nav-item">Gallery</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Toggle Light / Dark Mode" aria-label="Toggle Light / Dark Theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
+        <button class="btn btn-outline" onclick="openWhatsAppModal()" aria-label="Chat with Owner on WhatsApp">
+          <i class="fa-brands fa-whatsapp text-success"></i> WhatsApp
+        </button>
+        <a href="#register" class="btn btn-primary">Start Journey</a>
+        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Mobile Navigation" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content">
+
+    <!-- ============================================== -->
+    <!-- B. CINEMATIC HERO SECTION                      -->
+    <!-- ============================================== -->
+    <section class="hero" id="home" aria-label="Hero Introduction">
+      <div class="hero-bg-media">
+        <img src="assets/hero_cinematic.jpg" alt="High performance training at NEO GYM" fetchpriority="high">
+      </div>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <!-- Live Batch & Gym Status Badge (Calculated Dynamically) -->
+        <div class="hero-live-badge" id="liveGymStatusBadge">
+          <span class="live-indicator-dot"></span>
+          <span id="liveStatusText">FACILITY ACTIVE • DAILY TRAINING BATCHES OPEN</span>
+        </div>
+        
+        <h1 class="hero-title">
+          BUILT BY DISCIPLINE.<br>
+          <span class="text-gold-gradient">DEFINED BY STRENGTH.</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Step into an uncompromising training atmosphere engineered for real human transformation. Experience Olympic heavy iron, precision cardio decks, and certified in-house coaching at <strong>NEO GYM</strong>.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#register" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-bolt"></i> START YOUR JOURNEY
+          </a>
+          <a href="#plans" class="btn btn-outline btn-lg">
+            <i class="fa-solid fa-layer-group"></i> EXPLORE MEMBERSHIPS
+          </a>
+          <button class="btn btn-glass btn-lg" onclick="openWhatsAppModal('Hello! I would like to inquire about NEO GYM membership options and book a free trial.')">
+            <i class="fa-brands fa-whatsapp text-success"></i> WhatsApp Inquiry
+          </button>
+          <button class="btn btn-dark-outline btn-lg" onclick="openGymBot()">
+            <i class="fa-solid fa-robot text-gold"></i> Ask Gym Bot
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- C. TRUST & VERIFIED SPECIFICATIONS STRIP       -->
+    <!-- ============================================== -->
+    <section class="stats-strip" id="stats" aria-label="Verified Gym Specifications">
+      <div class="container">
+        <div class="stats-card-container">
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">02 Sessions</span>
+              <span class="stat-label">Daily Morning (05:30-10:30) &amp; Evening (04:30-10:00)</span>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fa-solid fa-weight-hanging"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">100% Iron</span>
+              <span class="stat-label">Olympic Squat Cages, 45° Leg Press &amp; Free Weights</span>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">07 Days</span>
+              <span class="stat-label">Full Weekly Schedule with Sunday Conditioning</span>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">₹1,000 / mo</span>
+              <span class="stat-label">Transparent Pricing • Zero Hidden Joining Fees</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- ABOUT & ATHLETIC PHILOSOPHY                    -->
+    <!-- ============================================== -->
+    <section class="section about-section" id="about" aria-label="About NEO GYM">
+      <div class="container">
+        <div class="grid-2 align-center">
+          <div class="about-image-wrap">
+            <img src="assets/athlete_pullup.jpg" alt="NEO GYM Calisthenic Lat Pull-Up and Muscle Symmetry" class="about-img" loading="lazy">
+            <div class="floating-badge">
+              <i class="fa-solid fa-crown text-gold"></i>
+              <div>
+                <strong>Discipline Over Motivation</strong>
+                <span>Natural hypertrophy &amp; athletic symmetry</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="eyebrow">WELCOME TO NEO GYM</span>
+            <h2 class="section-title">Where Dedication Meets World-Class Training</h2>
+            <p class="lead-text">
+              At <strong>NEO GYM</strong>, fitness is not an occasional hobby — it is the cornerstone of physical confidence, longevity, and mental clarity. Our facility provides an elite, energized training environment tailored for beginners and experienced lifters alike.
+            </p>
+
+            <ul class="feature-checklist">
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>Spacious, Sanitized Floor:</strong>
+                  <p>Branded wooden finish, shock-absorbing rubberized deadlift/squat zones, and full wall-mounted mirror bays for strict form inspection.</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>Commercial Bio-Mechanical Machinery:</strong>
+                  <p>Heavy-duty leg press, multi-pulley functional cable towers, incline/decline benches, and Olympic barbells built for progressive overload.</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>Personalized Transformation Support:</strong>
+                  <p>Evidence-based coaching covering fat loss, hypertrophy, movement mechanics, and macronutrient nutrition blueprints.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="btn-wrap">
+              <a href="#register" class="btn btn-primary">Start Your Journey Today</a>
+              <button class="btn btn-outline" onclick="openWhatsAppModal('Hi! Can I visit NEO Gym today for a facility walkthrough and orientation?')">
+                <i class="fa-solid fa-location-dot"></i> Schedule Facility Visit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- D. FACILITIES & TRAINING ZONES                 -->
+    <!-- ============================================== -->
+    <section class="section facilities-section bg-surface-tint" id="facilities" aria-label="Facilities and Training Zones">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">FACILITIES &amp; EQUIPMENT</span>
+          <h2 class="section-title">Built For Results. Equipped For Champions.</h2>
+          <p class="section-desc">Inspect our specialized workout arenas designed to challenge every energy system and muscle group safely.</p>
+        </div>
+
+        <div class="facilities-grid">
+          <!-- Card 1: Strength Training -->
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="assets/dumbbell_chalk.jpg" alt="NEO GYM Heavy Dumbbells with Chalk Explosion" loading="lazy">
+              <span class="facility-tag">STRENGTH &amp; IRON</span>
+            </div>
+            <div class="facility-body">
+              <h3>Heavy Strength &amp; Iron</h3>
+              <p>Target every muscle group with dedicated Olympic squat cages, flat/incline benches, 45-degree leg press, hack squats, and precision dumbbell racks.</p>
+              <ul class="facility-list">
+                <li><i class="fa-solid fa-check"></i> 45° Commercial Leg Press &amp; Squat Cages</li>
+                <li><i class="fa-solid fa-check"></i> Precision Dumbbell Sets up to 40kg+</li>
+                <li><i class="fa-solid fa-check"></i> Shock-Absorbing Rubberized Flooring</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2: Dynamic Conditioning -->
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="assets/battle_ropes.jpg" alt="High-Intensity Battle Ropes and Dynamic Waves at NEO GYM" loading="lazy">
+              <span class="facility-tag">DYNAMIC CONDITIONING</span>
+            </div>
+            <div class="facility-body">
+              <h3>Dynamic Waves &amp; Cardio Arena</h3>
+              <p>Heavy wave battle ropes, motorized running decks, spin cycles, and elliptical cross-trainers arranged for high-intensity cardiovascular conditioning.</p>
+              <ul class="facility-list">
+                <li><i class="fa-solid fa-check"></i> Heavy Wave Battle Ropes &amp; Turf Lanes</li>
+                <li><i class="fa-solid fa-check"></i> Commercial Motorized Running Decks</li>
+                <li><i class="fa-solid fa-check"></i> Real-time Calorie &amp; Heart-Rate Metrics</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3: Functional & Gear -->
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="assets/gear_flatlay.jpg" alt="Functional Floor Gear, Resistance Bands and Ab Wheels" loading="lazy">
+              <span class="facility-tag">FUNCTIONAL ARENA</span>
+            </div>
+            <div class="facility-body">
+              <h3>Functional Bays &amp; Core Gear</h3>
+              <p>Dual adjustable cable pulleys, heavy resistance bands, ab rollers, jump ropes, and core stability bays for complete muscular definition.</p>
+              <ul class="facility-list">
+                <li><i class="fa-solid fa-check"></i> Multi-Functional Cable Pulleys</li>
+                <li><i class="fa-solid fa-check"></i> Resistance Bands, Mats &amp; Ab Rollers</li>
+                <li><i class="fa-solid fa-check"></i> Full Mirror Wall For Technique Monitoring</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 4: 1-on-1 Personal Coaching -->
+          <div class="facility-card">
+            <div class="facility-img-wrap">
+              <img src="assets/kettlebell_grip.jpg" alt="1-on-1 Certified Personal Coaching and Kettlebell Power" loading="lazy">
+              <span class="facility-tag">PERSONAL COACHING</span>
+            </div>
+            <div class="facility-body">
+              <h3>Personal Training &amp; Guidance</h3>
+              <p>Private coaching with certified floor trainers. Receive progressive workout splits, real-time form correction, and accountable nutrition coaching.</p>
+              <ul class="facility-list">
+                <li><i class="fa-solid fa-check"></i> Dedicated 1-on-1 Certified Coach</li>
+                <li><i class="fa-solid fa-check"></i> Postural Assessment &amp; Form Checks</li>
+                <li><i class="fa-solid fa-check"></i> Tailored Meal Splits &amp; Macro Targets</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- G. WORKOUT VIDEOS (Sequential Theater Player)  -->
+    <!-- ============================================== -->
+    <section class="section videos-section" id="videos" aria-label="Live Workout Videos Theater">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <span class="eyebrow">TRAINING IN MOTION</span>
+            <h2 class="section-title">Master Proper Form &amp; Technique</h2>
+            <p class="section-desc">Explore our workout series playing in continuous auto-sequence. Study bar placement, pacing, and muscle contraction.</p>
+          </div>
+          <div class="header-action-wrap">
+            <button class="btn btn-outline owner-upload-btn" onclick="openUploadModal()">
+              <i class="fa-solid fa-lock text-gold"></i>
+              <span>Owner: Upload Video</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="video-player-container">
+          <!-- Main Cinema Screen -->
+          <div class="video-screen-card">
+            <div class="video-wrapper">
+              <video id="gymVideoPlayer" playsinline preload="metadata">
+                Your browser does not support HTML5 video.
+              </video>
+              
+              <!-- Video Overlay Badges -->
+              <div class="video-top-overlay">
+                <span class="now-playing-badge" id="videoCategoryBadge">Strength Training</span>
+                <span class="sequence-indicator" id="sequenceBadge">
+                  <i class="fa-solid fa-repeat"></i> Auto-Sequence: Video 1 of 3
+                </span>
+              </div>
+
+              <!-- Big Center Play Button (when paused) -->
+              <div class="video-center-btn" id="centerPlayBtn" onclick="togglePlayPause()" aria-label="Play or pause video">
+                <i class="fa-solid fa-play"></i>
+              </div>
+            </div>
+
+            <!-- Video Details Bar -->
+            <div class="video-details-bar">
+              <div>
+                <h3 id="currentVideoTitle">Heavy Strength &amp; Squat Technique</h3>
+                <p id="currentVideoDesc">Proper bar placement, foot stance, and explosive leg drive at NEO GYM.</p>
+              </div>
+              <div class="video-badge-pill" id="currentVideoMeta">
+                <i class="fa-solid fa-film text-gold"></i> <span id="currentVideoDate">Official NEO Workout</span>
+              </div>
+            </div>
+
+            <!-- Custom Interactive Video Controls -->
+            <div class="custom-video-controls">
+              <!-- Scrub Progress Bar -->
+              <div class="video-progress-container" id="videoProgressContainer" onclick="seekVideo(event)" title="Seek timeline" role="slider" aria-label="Video timeline">
+                <div class="video-progress-bar" id="videoProgressBar"></div>
+              </div>
+
+              <div class="controls-buttons-row">
+                <div class="controls-left">
+                  <!-- Previous Button -->
+                  <button class="control-btn" onclick="prevVideo()" title="Previous Video" aria-label="Previous Video">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </button>
+
+                  <!-- Play / Pause Button -->
+                  <button class="control-btn play-pause-btn" id="playPauseBtn" onclick="togglePlayPause()" title="Play / Pause" aria-label="Play or Pause">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+
+                  <!-- Next Button -->
+                  <button class="control-btn" onclick="nextVideo()" title="Next Video" aria-label="Next Video">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </button>
+
+                  <!-- Time Display -->
+                  <span class="video-time-display" id="videoTimeDisplay">0:00 / 0:00</span>
+                </div>
+
+                <div class="controls-right">
+                  <!-- Volume / Mute Slider -->
+                  <div class="volume-control-wrap">
+                    <button class="control-btn" id="volumeMuteBtn" onclick="toggleMute()" title="Mute / Unmute" aria-label="Mute or Unmute">
+                      <i class="fa-solid fa-volume-high"></i>
+                    </button>
+                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="0.8" oninput="changeVolume(this.value)" aria-label="Volume Slider">
+                  </div>
+
+                  <!-- Fullscreen Button -->
+                  <button class="control-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen" aria-label="Toggle Fullscreen">
+                    <i class="fa-solid fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Playlist Drawer -->
+          <div class="video-playlist-card">
+            <div class="playlist-header">
+              <h4><i class="fa-solid fa-list-ul text-gold"></i> Workout Sequence</h4>
+              <span class="playlist-count" id="playlistCount">3 Videos</span>
+            </div>
+
+            <div class="playlist-items-list" id="playlistItemsList">
+              <!-- Populated dynamically via app.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- E. MEMBERSHIP PRICING                          -->
+    <!-- ============================================== -->
+    <section class="section plans-section bg-surface-tint" id="plans" aria-label="Membership Plans and Pricing">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">MEMBERSHIP TIERS</span>
+          <h2 class="section-title">Transparent &amp; Affordable Plans</h2>
+          <p class="section-desc">Every membership tier grants unrestricted access to the heavy iron floor and cardio arena with zero hidden joining fees.</p>
+        </div>
+
+        <div class="plans-grid">
+          <!-- 1 Month Standard -->
+          <div class="plan-card">
+            <div class="plan-badge-slot">
+              <span class="plan-badge-pill subtle">FLEXIBLE PASS</span>
+            </div>
+            <h3 class="plan-title">Monthly Pass</h3>
+            <p class="plan-desc">Ideal for testing our gym floor and locking in a consistent daily training habit.</p>
+            <div class="plan-price-box">
+              <span class="currency">₹</span><span class="amount">1,000</span><span class="period">/ month</span>
+            </div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> Complete Strength &amp; Cardio Access</li>
+              <li><i class="fa-solid fa-check"></i> Locker &amp; Changing Facilities</li>
+              <li><i class="fa-solid fa-check"></i> General Floor Trainer Assistance</li>
+              <li><i class="fa-solid fa-check"></i> Free Filtered Drinking Water</li>
+            </ul>
+            <button class="btn btn-outline full-width" onclick="selectPlan('1 Month Standard')">
+              Choose Monthly
+            </button>
+          </div>
+
+          <!-- 3 Months (Recommended) -->
+          <div class="plan-card popular">
+            <div class="plan-badge-slot">
+              <span class="plan-badge-pill popular"><i class="fa-solid fa-crown"></i> MOST POPULAR</span>
+            </div>
+            <h3 class="plan-title">Quarterly (3 Months)</h3>
+            <p class="plan-desc">Our primary transformation package designed to achieve noticeable physique and strength results.</p>
+            <div class="plan-price-box">
+              <span class="currency">₹</span><span class="amount">2,500</span><span class="period">/ 3 months</span>
+            </div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> <strong>Everything in Monthly Pass</strong></li>
+              <li><i class="fa-solid fa-check"></i> Body Composition &amp; BMI Analysis</li>
+              <li><i class="fa-solid fa-check"></i> Basic Nutrition &amp; Calorie Blueprint</li>
+              <li><i class="fa-solid fa-check"></i> Trainer Guidance for Form Correction</li>
+              <li><i class="fa-solid fa-check"></i> <strong>Save ₹500</strong> vs monthly renewals</li>
+            </ul>
+            <button class="btn btn-primary full-width" onclick="selectPlan('3 Months Transformation')">
+              Get Quarterly Plan
+            </button>
+          </div>
+
+          <!-- 12 Months Annual VIP -->
+          <div class="plan-card">
+            <div class="plan-badge-slot">
+              <span class="plan-badge-pill subtle">BEST VALUE</span>
+            </div>
+            <h3 class="plan-title">Annual VIP (12 Months)</h3>
+            <p class="plan-desc">Maximum value for serious lifters committed to a full year of peak physical performance.</p>
+            <div class="plan-price-box">
+              <span class="currency">₹</span><span class="amount">8,000</span><span class="period">/ year</span>
+            </div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> <strong>Full 365 Days Unlimited Access</strong></li>
+              <li><i class="fa-solid fa-check"></i> Free 1-Month Membership Pause Privilege</li>
+              <li><i class="fa-solid fa-check"></i> Complete Diet &amp; Macronutrient Plan</li>
+              <li><i class="fa-solid fa-check"></i> Free NEO Gym Workout Bag &amp; Shaker</li>
+              <li><i class="fa-solid fa-check"></i> Priority Trainer Support</li>
+            </ul>
+            <button class="btn btn-outline full-width" onclick="selectPlan('12 Months Annual VIP')">
+              Choose Annual
+            </button>
+          </div>
+
+          <!-- Personal Coaching (PT) -->
+          <div class="plan-card">
+            <div class="plan-badge-slot">
+              <span class="plan-badge-pill subtle">1-ON-1 COACHING</span>
+            </div>
+            <h3 class="plan-title">Personal Coaching (PT)</h3>
+            <p class="plan-desc">Dedicated 1-on-1 certified coaching for accelerated muscle hypertrophy and aggressive fat burn.</p>
+            <div class="plan-price-box">
+              <span class="currency">₹</span><span class="amount amount-custom">Custom</span><span class="period">/ package</span>
+            </div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> Dedicated 1-on-1 Certified Coach</li>
+              <li><i class="fa-solid fa-check"></i> Weekly Progressive Workout Splits</li>
+              <li><i class="fa-solid fa-check"></i> Precise Macro &amp; Meal Calorie Tracking</li>
+              <li><i class="fa-solid fa-check"></i> Daily WhatsApp Accountability Support</li>
+            </ul>
+            <button class="btn btn-outline full-width" onclick="openWhatsAppModal('Hello! I would like to inquire about Personal Training (1-on-1 coach) packages and fees at NEO Gym.')">
+              Inquire on WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- F. TRAINERS & COACHING STANDARDS               -->
+    <!-- ============================================== -->
+    <section class="section coaching-section" id="trainers" aria-label="Coaching Standards and Philosophy">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">COACHING STANDARD</span>
+          <h2 class="section-title">Expert Guidance. Zero Guesswork.</h2>
+          <p class="section-desc">At NEO GYM, our certified coaching team focuses on biomechanical safety, form correction, and sustainable progress.</p>
+        </div>
+
+        <div class="coaching-grid">
+          <div class="coaching-card">
+            <div class="coaching-icon"><i class="fa-solid fa-person-chalkboard"></i></div>
+            <h3>Biomechanical Form Correction</h3>
+            <p>Our trainers ensure your spine, knees, and shoulders stay protected under heavy compound loads, minimizing injury risk while maximizing muscle engagement.</p>
+          </div>
+
+          <div class="coaching-card">
+            <div class="coaching-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Progressive Overload Tracking</h3>
+            <p>Never stall on plateaus. We structure your weekly rep ranges, sets, and weights so your body is continuously adapting and growing stronger.</p>
+          </div>
+
+          <div class="coaching-card">
+            <div class="coaching-icon"><i class="fa-solid fa-apple-whole"></i></div>
+            <h3>Customized Nutrition Blueprint</h3>
+            <p>Training is only half the battle. We assist members with realistic protein intake targets, calorie management, and meal timing around workout sessions.</p>
+          </div>
+
+          <div class="coaching-card">
+            <div class="coaching-icon"><i class="fa-solid fa-user-shield"></i></div>
+            <h3>Direct Coach &amp; Owner Line</h3>
+            <p>Have a question regarding form or workout splits? Connect directly with the gym owner and head coaching desk via phone or WhatsApp (+91 8892152766).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- H. RESPONSIVE IMAGE GALLERY & LIGHTBOX         -->
+    <!-- ============================================== -->
+    <section class="section gallery-section bg-surface-tint" id="gallery" aria-label="Facility Photo Gallery">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">PHOTO GALLERY</span>
+          <h2 class="section-title">Step Inside NEO GYM</h2>
+          <p class="section-desc">Authentic photographs of our spacious workout floor, commercial machinery, and dedicated training zones.</p>
+        </div>
+
+        <!-- Filter Chips with Apple Frosted Glass Pill Effect -->
+        <div class="gallery-filters" role="tablist">
+          <button class="gallery-filter-btn active" onclick="filterGallery('all', this)" role="tab" aria-selected="true">All Facilities &amp; Athletes</button>
+          <button class="gallery-filter-btn" onclick="filterGallery('strength', this)" role="tab" aria-selected="false">Strength &amp; Iron</button>
+          <button class="gallery-filter-btn" onclick="filterGallery('performance', this)" role="tab" aria-selected="false">Athletic Performance</button>
+          <button class="gallery-filter-btn" onclick="filterGallery('functional', this)" role="tab" aria-selected="false">Functional Gear</button>
+          <button class="gallery-filter-btn" onclick="filterGallery('floor', this)" role="tab" aria-selected="false">Gym Floor</button>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Item 1: Heavy Strength Dumbbell with Chalk Blast -->
+          <div class="gallery-item" data-category="strength" onclick="openLightbox('assets/dumbbell_chalk.jpg', 'Heavy Strength & Iron: Olympic dumbbell with chalk blast & precision knurling')">
+            <img src="assets/dumbbell_chalk.jpg" alt="NEO GYM Heavy Dumbbell with Chalk Explosion" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Heavy Iron &amp; Chalk Blast</h4>
+              <span>Precision knurled dumbbells &amp; heavy compound lifts</span>
+            </div>
+          </div>
+
+          <!-- Item 2: Athletic Symmetry & Pull-Up -->
+          <div class="gallery-item" data-category="performance" onclick="openLightbox('assets/athlete_pullup.jpg', 'Athletic Performance: Calisthenic lat discipline & symmetry')">
+            <img src="assets/athlete_pullup.jpg" alt="NEO GYM Athlete Pull-Up and Back Muscular Definition" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Back Symmetry &amp; Pull-Up</h4>
+              <span>Calisthenic lat discipline &amp; natural muscular definition</span>
+            </div>
+          </div>
+
+          <!-- Item 3: Battle Ropes Conditioning -->
+          <div class="gallery-item" data-category="performance" onclick="openLightbox('assets/battle_ropes.jpg', 'Conditioning: Heavy wave battle ropes for cardiovascular stamina')">
+            <img src="assets/battle_ropes.jpg" alt="Dynamic Battle Ropes Conditioning at NEO GYM" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Battle Ropes Conditioning</h4>
+              <span>Dynamic waves &amp; full-body metabolic stamina</span>
+            </div>
+          </div>
+
+          <!-- Item 4: Forearm Grip & Kettlebell Power -->
+          <div class="gallery-item" data-category="strength" onclick="openLightbox('assets/kettlebell_grip.jpg', 'Strength Training: Heavy kettlebell grip & posterior chain power')">
+            <img src="assets/kettlebell_grip.jpg" alt="Kettlebell Grip and Forearm Strength at NEO GYM" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Grip Strength &amp; Kettlebells</h4>
+              <span>Functional tendon density &amp; explosive hip drives</span>
+            </div>
+          </div>
+
+          <!-- Item 5: Functional Floor Equipment Flatlay -->
+          <div class="gallery-item" data-category="functional" onclick="openLightbox('assets/gear_flatlay.jpg', 'Functional Gear: Resistance bands, ab rollers, ropes & training mats')">
+            <img src="assets/gear_flatlay.jpg" alt="Functional Floor Equipment and Training Gear" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Functional Gear &amp; Mobility</h4>
+              <span>Resistance bands, ab wheels, heavy ropes &amp; floor mats</span>
+            </div>
+          </div>
+
+          <!-- Item 6: Main Gym Training Floor -->
+          <div class="gallery-item" data-category="floor" onclick="openLightbox('assets/gym_interior_1.jpg', 'Main Training Floor: NEO GYM signature wooden wall & cable stations')">
+            <img src="assets/gym_interior_1.jpg" alt="NEO GYM Main Training Floor" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Main Training Floor</h4>
+              <span>NEO GYM signature wooden wall &amp; cable stations</span>
+            </div>
+          </div>
+
+          <!-- Item 7: Cardio & Endurance Lineup -->
+          <div class="gallery-item" data-category="floor" onclick="openLightbox('assets/gym_cardio.jpg', 'Cardio Arena: Treadmills, spin cycles, ellipticals, and natural lighting')">
+            <img src="assets/gym_cardio.jpg" alt="NEO GYM Cardio Lineup" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Cardio Arena Lineup</h4>
+              <span>Treadmills, spin cycles, ellipticals &amp; natural lighting</span>
+            </div>
+          </div>
+
+          <!-- Item 8: Free Weights & Squat Cages -->
+          <div class="gallery-item" data-category="strength" onclick="openLightbox('assets/gym_weights.jpg', 'Heavy Strength & Iron Zone: Leg press, squat racks, and free weights')">
+            <img src="assets/gym_weights.jpg" alt="NEO GYM Heavy Strength & Squat Zone" loading="lazy">
+            <div class="gallery-overlay">
+              <h4>Free Weights &amp; Cages</h4>
+              <span>Leg press, benches, pull-up stations &amp; dumbbell bays</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- I. MEMBER REGISTRATION & FREE TRIAL FORM       -->
+    <!-- ============================================== -->
+    <section class="section register-section" id="register" aria-label="Member Registration and Lead Capture">
+      <div class="container">
+        <div class="register-card-grid">
+          <div class="register-info">
+            <span class="eyebrow">JOIN NEO GYM TODAY</span>
+            <h2 class="section-title">Start Your Free Trial Or Register Online</h2>
+            <p>
+              Fill out the registration form below. Your application is saved directly to our backend records, and our training desk will contact you to schedule your complimentary orientation and workout pass.
+            </p>
+
+            <div class="trust-points">
+              <div class="trust-item">
+                <i class="fa-solid fa-shield-halved text-gold"></i>
+                <div>
+                  <strong>Zero Joining Pressure</strong>
+                  <span>Visit our facility, test the machinery, and decide on your own terms.</span>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <i class="fa-solid fa-person-chalkboard text-gold"></i>
+                <div>
+                  <strong>Complimentary Trainer Consultation</strong>
+                  <span>Free body composition evaluation &amp; postural assessment on day one.</span>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <i class="fa-brands fa-whatsapp text-success"></i>
+                <div>
+                  <strong>Direct WhatsApp Confirmation</strong>
+                  <span>Immediate access to the gym owner at +91 8892152766.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="registration-perk-box">
+              <i class="fa-solid fa-gift text-gold"></i>
+              <div>
+                <strong>Bonus Welcome Perk:</strong>
+                <span>Receive a free 1-on-1 Fitness Assessment &amp; Meal Blueprint upon your first visit!</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Registration Form -->
+          <div class="register-form-box">
+            <div class="form-header">
+              <h3><i class="fa-solid fa-user-plus text-gold"></i> Member Registration Form</h3>
+              <p>Takes less than 30 seconds to complete</p>
+            </div>
+
+            <form id="registrationForm" onsubmit="handleRegistration(event)">
+              <div class="form-group">
+                <label for="fullName">Full Name <span class="required">*</span></label>
+                <div class="input-icon-wrap">
+                  <i class="fa-solid fa-user"></i>
+                  <input type="text" id="fullName" name="name" placeholder="e.g. Rahul Sharma" required autocomplete="name">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="mobileNo">Mobile Number <span class="required">*</span></label>
+                <div class="input-icon-wrap">
+                  <i class="fa-solid fa-phone"></i>
+                  <input type="tel" id="mobileNo" name="phone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" title="Please enter a valid 10-digit mobile number" required autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="emailAddr">Email Address</label>
+                <div class="input-icon-wrap">
+                  <i class="fa-solid fa-envelope"></i>
+                  <input type="email" id="emailAddr" name="email" placeholder="e.g. rahul@gmail.com" autocomplete="email">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fitnessGoal">Your Primary Goal</label>
+                  <select id="fitnessGoal" name="goal">
+                    <option value="Weight Loss & Fat Burn">Weight Loss &amp; Fat Burn</option>
+                    <option value="Muscle Building & Strength" selected>Muscle Building &amp; Strength</option>
+                    <option value="General Fitness & Stamina">General Fitness &amp; Stamina</option>
+                    <option value="Body Transformation">Complete Transformation</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="preferredPlan">Selected Plan</label>
+                  <select id="preferredPlan" name="plan">
+                    <option value="1 Month Standard">1 Month Standard (₹1,000)</option>
+                    <option value="3 Months Transformation" selected>3 Months Transformation (₹2,500)</option>
+                    <option value="12 Months Annual VIP">12 Months Annual VIP (₹8,000)</option>
+                    <option value="Personal Training (1-on-1)">Personal Training (1-on-1)</option>
+                    <option value="Free 1-Day Trial">Free 1-Day Trial Pass</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary full-width" id="registerSubmitBtn">
+                <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Submit Registration</span>
+                <span class="spinner" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i> Saving to Records...</span>
+              </button>
+
+              <!-- Live Success / Error Banner -->
+              <div id="formStatus" class="form-status" style="display: none;" role="alert"></div>
+            </form>
+            <!-- ============================================== -->
+            <!-- ATHLETIC BMI & BODY COMPOSITION CALCULATOR     -->
+                        <!-- ============================================== -->
+            <!-- ATHLETIC BMI & BODY COMPOSITION CALCULATOR     -->
+                        <!-- ============================================== -->
+            <!-- ATHLETIC BMI & BODY COMPOSITION CALCULATOR     -->
+            <!-- ============================================== -->
+            <div class="bmi-calculator-widget" id="bmiCalculatorWidget">
+              <div class="bmi-widget-header">
+                <div class="bmi-widget-title">
+                  <i class="fa-solid fa-gauge-high text-gold"></i>
+                  <h4>Athletic BMI Calculator</h4>
+                </div>
+                <span class="bmi-live-tag"><span class="pulse-indicator"></span> Live Meter</span>
+              </div>
+
+              <div class="bmi-widget-body">
+                <!-- Left: Inputs Panel -->
+                <div class="bmi-inputs-panel">
+                  <!-- Row 1: Gender Selection Toggle -->
+                  <div class="bmi-form-group">
+                    <label class="bmi-field-label">Gender</label>
+                    <div class="bmi-gender-toggle" role="radiogroup" aria-label="Gender selection">
+                      <button type="button" class="bmi-gender-btn active" id="bmiMaleBtn" onclick="selectBmiGender('male')" aria-checked="true" role="radio">
+                        <i class="fa-solid fa-mars"></i> Male
+                      </button>
+                      <button type="button" class="bmi-gender-btn" id="bmiFemaleBtn" onclick="selectBmiGender('female')" aria-checked="false" role="radio">
+                        <i class="fa-solid fa-venus"></i> Female
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Row 2: Manual Numerical Metrics (Blank Values with Placeholders, Units in Label) -->
+                  <div class="bmi-metrics-grid">
+                    <div class="bmi-field">
+                      <label for="bmiAge" class="bmi-field-label">Age (yrs)</label>
+                      <div class="bmi-input-wrap">
+                        <input type="number" id="bmiAge" value="" placeholder="25" inputmode="numeric" oninput="liveUpdateBMI()">
+                      </div>
+                    </div>
+
+                    <div class="bmi-field">
+                      <label for="bmiHeight" class="bmi-field-label">Height (cm)</label>
+                      <div class="bmi-input-wrap">
+                        <input type="number" id="bmiHeight" value="" placeholder="180" inputmode="decimal" step="any" oninput="liveUpdateBMI()">
+                      </div>
+                    </div>
+
+                    <div class="bmi-field">
+                      <label for="bmiWeight" class="bmi-field-label">Weight (kg)</label>
+                      <div class="bmi-input-wrap">
+                        <input type="number" id="bmiWeight" value="" placeholder="65" inputmode="decimal" step="any" oninput="liveUpdateBMI()">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Row 3: Action Buttons (Structured & Symmetrical) -->
+                  <div class="bmi-actions-grid">
+                    <button type="button" class="btn btn-primary bmi-calc-btn" onclick="calculateBMIExplicit()">
+                      <i class="fa-solid fa-calculator"></i> Calculate BMI
+                    </button>
+                    <div class="bmi-sub-actions">
+                      <button type="button" class="btn btn-secondary bmi-sub-btn" onclick="clearBMI()">
+                        <i class="fa-solid fa-rotate-left"></i> Clear
+                      </button>
+                      <button type="button" class="btn btn-outline bmi-sub-btn" onclick="syncBmiToRegistration()" title="Apply result to registration goal">
+                        <i class="fa-solid fa-bullseye text-gold"></i> Apply to Plan
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right: Meter Gauge & Results Panel -->
+                <div class="bmi-gauge-panel">
+                  <div class="bmi-gauge-card">
+                    <!-- Readout Header (Never Breaks / Wraps) -->
+                    <div class="bmi-score-header">
+                      <span class="bmi-score-title">BMI =</span>
+                      <strong class="bmi-score-number" id="bmiNumberVal">--</strong>
+                      <span class="bmi-score-unit">kg/m²</span>
+                      <span class="bmi-status-pill empty" id="bmiStatusPill">Ready</span>
+                    </div>
+
+                    <!-- SVG Speedometer Gauge -->
+                    <div class="bmi-svg-container">
+                      <svg viewBox="0 0 250 148" class="bmi-gauge-svg" aria-label="BMI Speedometer Meter">
+                        <defs>
+                          <filter id="needleGlow" x="-20%" y="-20%" width="140%" height="140%">
+                            <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="rgba(0,0,0,0.5)" />
+                          </filter>
+                        </defs>
+
+                        <!-- Gauge Arc Segments -->
+                        <!-- Seg 1: Severe Underweight (<16) -->
+                        <path d="M 27.00 130.00 A 98 98 0 0 1 31.80 99.72 L 54.62 107.13 A 74 74 0 0 0 51.00 130.00 Z" fill="#b91c1c" class="gauge-arc" />
+                        <!-- Seg 2: Underweight (16-18.5) -->
+                        <path d="M 31.80 99.72 A 98 98 0 0 1 55.70 60.70 L 72.67 77.67 A 74 74 0 0 0 54.62 107.13 Z" fill="#eab308" class="gauge-arc" />
+                        <!-- Seg 3: Normal (18.5-25) -->
+                        <path d="M 55.70 60.70 A 98 98 0 0 1 125.00 32.00 L 125.00 56.00 A 74 74 0 0 0 72.67 77.67 Z" fill="#10b981" class="gauge-arc" id="arcNormal" />
+                        <!-- Seg 4: Overweight (25-30) -->
+                        <path d="M 125.00 32.00 A 98 98 0 0 1 185.33 52.77 L 170.56 71.69 A 74 74 0 0 0 125.00 56.00 Z" fill="#f59e0b" class="gauge-arc" />
+                        <!-- Seg 5: Obese Class I/II (30-35) -->
+                        <path d="M 185.33 52.77 A 98 98 0 0 1 213.82 88.58 L 192.07 98.73 A 74 74 0 0 0 170.56 71.69 Z" fill="#f97316" class="gauge-arc" />
+                        <!-- Seg 6: Severe Obese (35-40+) -->
+                        <path d="M 213.82 88.58 A 98 98 0 0 1 223.00 130.00 L 199.00 130.00 A 74 74 0 0 0 192.07 98.73 Z" fill="#dc2626" class="gauge-arc" />
+
+                        <!-- Outer Category Arc Labels -->
+                        <text x="26" y="74" class="gauge-cat-label">Underweight</text>
+                        <text x="82" y="24" class="gauge-cat-label text-bold">Normal</text>
+                        <text x="162" y="24" class="gauge-cat-label">Overweight</text>
+                        <text x="222" y="74" class="gauge-cat-label">Obesity</text>
+
+                        <!-- Scale Numerical Threshold Ticks -->
+                        <text x="66" y="110" class="gauge-num-tick">16</text>
+                        <text x="79" y="85" class="gauge-num-tick">18.5</text>
+                        <text x="125" y="68" class="gauge-num-tick">25</text>
+                        <text x="162" y="82" class="gauge-num-tick">30</text>
+                        <text x="180" y="104" class="gauge-num-tick">35</text>
+
+                        <!-- Meter Arrow / Needle (Starts resting at -90deg) -->
+                        <g id="bmiNeedleGroup" style="transform-origin: 125px 130px; transform: rotate(-90deg); transition: transform 0.85s cubic-bezier(0.34, 1.56, 0.64, 1);" filter="url(#needleGlow)">
+                          <!-- Needle shaft -->
+                          <line x1="125" y1="130" x2="125" y2="48" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" class="needle-shaft" />
+                          <!-- Needle pointer head -->
+                          <polygon points="125,40 120,49 130,49" fill="#d4af37" class="needle-head" />
+                          <!-- Pivot Outer Ring -->
+                          <circle cx="125" cy="130" r="9" fill="#0f172a" stroke="#d4af37" stroke-width="2.5" />
+                          <!-- Pivot Inner Dot -->
+                          <circle cx="125" cy="130" r="4" fill="#d4af37" />
+                        </g>
+                      </svg>
+                    </div>
+
+                    <!-- Target / Recommendation Guidance -->
+                    <div class="bmi-guidance" id="bmiGuidanceText">
+                      Enter your height &amp; weight to calculate athletic BMI.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- J. TIMINGS, LOCATION & QR CODE                 -->
+    <!-- ============================================== -->
+    <section class="section timings-section bg-surface-tint" id="contact" aria-label="Gym Timings, Location and Contact">
+      <div class="container">
+        <div class="grid-2 align-center">
+          <div class="timings-info">
+            <span class="eyebrow">VISIT &amp; CONNECT</span>
+            <h2 class="section-title">Gym Timings &amp; Direct Contact</h2>
+            
+            <div class="timing-cards">
+              <div class="time-card">
+                <div class="time-card-icon"><i class="fa-solid fa-sun"></i></div>
+                <div class="time-card-content">
+                  <strong>Morning Batch (Mon – Sat)</strong>
+                  <p>05:30 AM – 10:30 AM</p>
+                </div>
+              </div>
+
+              <div class="time-card">
+                <div class="time-card-icon"><i class="fa-solid fa-moon"></i></div>
+                <div class="time-card-content">
+                  <strong>Evening Batch (Mon – Sat)</strong>
+                  <p>04:30 PM – 10:00 PM</p>
+                </div>
+              </div>
+
+              <div class="time-card">
+                <div class="time-card-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                <div class="time-card-content">
+                  <strong>Sunday Workout Conditioning</strong>
+                  <p>06:00 AM – 12:00 PM (Morning Special)</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-details-box">
+              <div class="contact-item">
+                <i class="fa-solid fa-phone text-gold"></i>
+                <div>
+                  <strong>Direct Call &amp; Inquiries:</strong>
+                  <a href="tel:8892152766">+91 8892152766</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fa-brands fa-whatsapp text-success"></i>
+                <div>
+                  <strong>Official WhatsApp Desk:</strong>
+                  <a href="javascript:void(0)" onclick="openWhatsAppModal()">+91 8892152766 (Click to Chat)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- QR Code Mobile Connect Card -->
+          <div class="qr-card">
+            <div class="qr-card-inner">
+              <span class="qr-tag">SCAN &amp; CONNECT</span>
+              <h3>Scan QR Code On Mobile</h3>
+              <p>Scan using your smartphone camera for rapid WhatsApp contact and membership queries.</p>
+              <div class="qr-image-wrap">
+                <img src="assets/qr_code.png" alt="NEO GYM Official QR Code" class="qr-img" loading="lazy">
+              </div>
+              <button class="btn btn-outline btn-sm" onclick="openWhatsAppModal()">
+                <i class="fa-brands fa-whatsapp text-success"></i> Chat on WhatsApp Directly
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- K. FINAL HIGH-CONVERSION CTA                   -->
+    <!-- ============================================== -->
+    <section class="final-cta-section" aria-label="Final Call to Action">
+      <div class="container">
+        <div class="final-cta-content">
+          <span class="eyebrow">YOUR MOVE</span>
+          <h2 class="final-cta-title">THE ONLY BAD WORKOUT IS THE ONE THAT DIDN'T HAPPEN.</h2>
+          <p class="final-cta-desc">
+            Stop waiting for the perfect day. Step through our doors, feel the energy of our training floor, and experience why NEO GYM is built different.
+          </p>
+          <div class="btn-wrap" style="justify-content: center;">
+            <a href="#register" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-bolt"></i> Claim Free 1-Day Trial Pass
+            </a>
+            <button class="btn btn-glass btn-lg" onclick="openWhatsAppModal('Hi! I would like to book my free workout session at NEO Gym.')">
+              <i class="fa-brands fa-whatsapp text-success"></i> Chat With Owner
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================== -->
+  <!-- FOOTER                                         -->
+  <!-- ============================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-dumbbell"></i></div>
+          <div class="logo-text">
+            <span class="brand-title">NEO GYM</span>
+            <span class="brand-tagline">STRENGTH &amp; PERFORMANCE</span>
+          </div>
+        </div>
+        <p>"Built by discipline. Defined by strength." Premium fitness environment, Olympic machinery, and certified coaching tailored for real results.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Gym</a></li>
+          <li><a href="#facilities">Facilities &amp; Iron</a></li>
+          <li><a href="workouts.html">Workouts (5-Day Splits)</a></li>
+          <li><a href="#videos">Workout Videos</a></li>
+          <li><a href="#plans">Memberships</a></li>
+          <li><a href="#trainers">Coaching Standards</a></li>
+          <li><a href="#gallery">Facility Gallery</a></li>
+          <li><a href="#contact">Hours &amp; Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Owner</h4>
+        <p><i class="fa-solid fa-phone text-gold"></i> <a href="tel:8892152766">+91 8892152766</a></p>
+        <p><i class="fa-brands fa-whatsapp text-success"></i> <a href="javascript:void(0)" onclick="openWhatsAppModal()">+91 8892152766</a></p>
+        <p><i class="fa-solid fa-clock text-gold"></i> Mon–Sat: 5:30–10:30 AM &amp; 4:30–10 PM</p>
+        <div style="margin-top: 16px;">
+          <button class="btn btn-primary btn-sm" onclick="openWhatsAppModal()">
+            <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-container text-center">
+        <p>© 2026 <strong>NEO GYM</strong>. All Rights Reserved. Built by Discipline • Defined by Strength.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- MODAL: Owner Workout Video Upload              -->
+  <!-- ============================================== -->
+  <div class="modal-backdrop" id="uploadModal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="uploadModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="wa-icon-circle" style="background: var(--gold-primary); color: #060709;">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+          </div>
+          <div>
+            <h3 id="uploadModalTitle">Owner Video Upload</h3>
+            <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-solid fa-shield-halved"></i> Restricted to Gym Owner</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeUploadModal()" aria-label="Close video upload modal">&times;</button>
+      </div>
+
+      <form id="ownerUploadForm" onsubmit="handleVideoUpload(event)">
+        <div class="modal-body">
+          <!-- Owner PIN Verification -->
+          <div class="wa-field-group">
+            <label for="ownerPinInput">Owner Security PIN <span class="required">*</span></label>
+            <div class="input-icon-wrap">
+              <i class="fa-solid fa-key"></i>
+              <input type="password" id="ownerPinInput" placeholder="Enter Owner Security PIN" required autocomplete="current-password">
+            </div>
+            <small class="wa-help-text">Only the verified gym owner can upload new workout videos to the sequence.</small>
+          </div>
+
+          <div class="wa-field-group">
+            <label for="videoTitleInput">Workout Video Title <span class="required">*</span></label>
+            <input type="text" id="videoTitleInput" placeholder="e.g. Barbell Squat Form &amp; Foot Drive" required>
+          </div>
+
+          <div class="form-row">
+            <div class="wa-field-group">
+              <label for="videoCategorySelect">Category</label>
+              <select id="videoCategorySelect">
+                <option value="Strength Training">Strength Training</option>
+                <option value="Cardio & Stamina">Cardio &amp; Stamina</option>
+                <option value="Functional & Cable">Functional &amp; Cable</option>
+                <option value="Transformation">Transformation</option>
+                <option value="Trainer Guidance">Trainer Guidance</option>
+              </select>
+            </div>
+
+            <div class="wa-field-group">
+              <label for="videoFileInput">Video File (.mp4, .webm) <span class="required">*</span></label>
+              <input type="file" id="videoFileInput" accept="video/mp4,video/webm,video/ogg,video/quicktime,video/x-m4v" required>
+            </div>
+          </div>
+
+          <div class="wa-field-group">
+            <label for="videoDescInput">Short Description</label>
+            <textarea id="videoDescInput" rows="2" placeholder="Movement cues, breathing tips, or rep cadence for members..."></textarea>
+          </div>
+
+          <!-- Upload Status & Progress Banner -->
+          <div id="uploadStatusBanner" class="form-status" style="display: none;" role="alert"></div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeUploadModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="uploadSubmitBtn">
+            <span class="btn-text"><i class="fa-solid fa-cloud-arrow-up"></i> Upload &amp; Add to Playlist</span>
+            <span class="spinner" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i> Uploading...</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MODAL: Custom WhatsApp Chat                    -->
+  <!-- ============================================== -->
+  <div class="modal-backdrop" id="waModal" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="waModalTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="wa-icon-circle"><i class="fa-brands fa-whatsapp"></i></div>
+          <div>
+            <h3 id="waModalTitle">Chat on WhatsApp</h3>
+            <span class="online-indicator"><span class="dot"></span> NEO GYM Owner Online</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="closeWhatsAppModal()" aria-label="Close WhatsApp chat modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="wa-field-group">
+          <label>Recipient:</label>
+          <div class="wa-recipient-box">
+            <i class="fa-solid fa-user-shield text-gold"></i>
+            <span>NEO GYM Owner: <strong>+91 8892152766</strong></span>
+          </div>
+        </div>
+
+        <div class="wa-quick-chips">
+          <span>Quick Messages:</span>
+          <div class="chip-container">
+            <button type="button" class="chip" onclick="setWAMessage('Hi! I want to know about membership fees and current offers at NEO Gym.')">💰 Membership Fees</button>
+            <button type="button" class="chip" onclick="setWAMessage('Hello! Can I book a 1-day free trial workout pass?')">🔥 Free Trial Pass</button>
+            <button type="button" class="chip" onclick="setWAMessage('Hi, I am looking for a Personal Trainer for weight loss / muscle building.')">🏋️ Personal Training</button>
+            <button type="button" class="chip" onclick="setWAMessage('Hello! What are your gym timings today?')">⏰ Gym Timings</button>
+          </div>
+        </div>
+
+        <div class="wa-field-group">
+          <div class="label-with-counter">
+            <label for="waMessageText">Your Message:</label>
+            <span class="char-counter" id="waCharCount">0 / 1000</span>
+          </div>
+          <textarea 
+            id="waMessageText" 
+            rows="5" 
+            maxlength="1000" 
+            placeholder="Type your message here... (e.g. Hello, I want to join NEO Gym. Please share details.)"
+            oninput="handleWAMessageInput(this)"></textarea>
+          <small class="wa-help-text">Clicking 'Send Message' will open WhatsApp Web or your mobile WhatsApp App with this pre-typed message directly to 8892152766.</small>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="closeWhatsAppModal()">Cancel</button>
+        <button type="button" class="btn btn-whatsapp" onclick="sendWhatsAppMessage()">
+          <i class="fa-solid fa-paper-plane"></i> Send to WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- MODAL: High-Res Image Lightbox                 -->
+  <!-- ============================================== -->
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)" role="dialog" aria-modal="true" aria-label="Photo Lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">&times;</button>
+      <img id="lightboxImg" src="" alt="Enlarged Gym View">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- ============================================== -->
+  <!-- FLOATING ACTION BUTTON: WhatsApp (Bottom Left) -->
+  <!-- ============================================== -->
+  <button class="floating-wa-btn" id="floatingWaBtn" onclick="openWhatsAppModal()" title="Chat with NEO Gym Owner on WhatsApp" aria-label="Chat with NEO Gym Owner on WhatsApp">
+    <div class="wa-btn-content">
+      <i class="fa-brands fa-whatsapp wa-main-icon"></i>
+      <span class="wa-btn-text">Chat on WhatsApp</span>
+    </div>
+  </button>
+
+  <!-- ============================================== -->
+  <!-- GYM ASSISTANT BOT: NEO Fitness Bot (Right)     -->
+  <!-- ============================================== -->
+  <div class="gym-bot-wrapper" id="gymBotWrapper">
+    <!-- Floating Bot Button -->
+    <button class="bot-trigger-btn" id="botTriggerBtn" onclick="toggleGymBot()" title="Ask NEO Gym Assistant" aria-label="Open Gym Bot">
+      <div class="bot-avatar">
+        <i class="fa-solid fa-robot"></i>
+      </div>
+      <div class="bot-badge-text">
+        <span>Gym Assistant</span>
+        <small class="online-status">Online</small>
+      </div>
+      <span class="bot-pulse"></span>
+    </button>
+
+    <!-- Bot Chat Window -->
+    <div class="bot-window" id="botWindow" style="display: none;" role="region" aria-label="Gym Assistant Chatbot">
+      <div class="bot-window-header">
+        <div class="bot-header-info">
+          <div class="bot-header-avatar">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+          <div>
+            <h4>NEO Gym Assistant</h4>
+            <span class="bot-sub"><span class="dot"></span> Instant Information Desk</span>
+          </div>
+        </div>
+        <button class="bot-close-btn" onclick="toggleGymBot()" aria-label="Close Chat">&times;</button>
+      </div>
+
+      <!-- Quick Topic Chips (Smooth Horizontal Carousel) -->
+      <div class="bot-topic-chips" role="group" aria-label="Quick inquiry options">
+        <button type="button" onclick="askBotQuestion('What are the gym timings?')">⏰ Timings</button>
+        <button type="button" onclick="askBotQuestion('What are the membership fees and plans?')">💳 Pricing</button>
+        <button type="button" onclick="askBotQuestion('What equipment is available?')">🏋️ Equipment</button>
+        <button type="button" onclick="askBotQuestion('What are the official workout plans?')">📋 Workout Plans</button>
+        <button type="button" onclick="askBotQuestion('How to do chest workout?')">💥 Chest Workout</button>
+        <button type="button" onclick="askBotQuestion('What is the Biceps Workout routine?')">💪 Biceps Workout</button>
+        <button type="button" onclick="askBotQuestion('Is personal training available?')">🤝 Personal Coaching</button>
+        <button type="button" onclick="askBotQuestion('Can I get a 1-day free trial?')">🎟️ Free Trial</button>
+        <button type="button" onclick="askBotQuestion('Calculate my BMI and body composition')">⚡ BMI Calculator</button>
+      </div>
+
+      <!-- Chat Messages Container -->
+      <div class="bot-messages" id="botMessages">
+        <div class="bot-msg incoming">
+          <div class="bot-bubble">
+            Welcome to <strong>NEO GYM</strong>! I am your virtual fitness AI assistant.
+          </div>
+          <span class="msg-time">Just now</span>
+        </div>
+      </div>
+
+      <!-- Bot Input Area -->
+      <form class="bot-input-area" onsubmit="handleBotSubmit(event)">
+        <input 
+          type="text" 
+          id="botInput" 
+          placeholder="Ask anything about NEO Gym..." 
+          autocomplete="off"
+          aria-label="Ask Gym Bot a question">
+        <button type="submit" class="bot-send-btn" aria-label="Send question">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Application Logic -->
+  <script src="app.js?v=neo_fresh"></script>
+</body>
+</html>

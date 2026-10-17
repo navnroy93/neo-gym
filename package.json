@@ -1,0 +1,28 @@
+{
+  "name": "neo-gym-website",
+  "version": "1.0.0",
+  "description": "NEO GYM - Luxury Performance Fitness Website with AI Assistant Bot, Sequential Workout Theater, WhatsApp Connect, and Excel Member Sync",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "gym",
+    "fitness",
+    "neo-gym",
+    "strength-training",
+    "lead-generation",
+    "whatsapp"
+  ],
+  "author": "NEO GYM",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "multer": "^2.4.0",
+    "xlsx": "^0.18.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
