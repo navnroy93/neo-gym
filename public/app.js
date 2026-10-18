@@ -777,6 +777,7 @@ function renderPlaylist() {
 
 // Load Video by Index
 function loadVideo(index, autoPlay = false) {
+  if (gymVideoPlayer) gymVideoPlayer.muted = true;
   if (!gymVideos || gymVideos.length === 0) return;
   if (!gymVideoPlayer) return;
 
@@ -1261,21 +1262,21 @@ function updateLiveGymStatus() {
 
   if (day === 0) {
     if (currentTimeVal >= sunStart && currentTimeVal < sunEnd) {
-      statusText = 'FACILITY OPEN • SUNDAY CONDITIONING SESSION ACTIVE';
+      statusText = 'FACILITY OPEN • SUNDAY SESSION ACTIVE';
     } else {
       statusText = 'DOORS REOPEN MONDAY AT 05:30 AM';
     }
   } else {
     if (currentTimeVal >= morningStart && currentTimeVal < morningEnd) {
-      statusText = 'FACILITY OPEN • MORNING BATCH ACTIVE (UNTIL 10:30 AM)';
+      statusText = 'FACILITY OPEN • MORNING BATCH ACTIVE';
     } else if (currentTimeVal >= eveningStart && currentTimeVal < eveningEnd) {
-      statusText = 'FACILITY OPEN • EVENING BATCH ACTIVE (UNTIL 10:00 PM)';
+      statusText = 'FACILITY OPEN • EVENING BATCH ACTIVE';
     } else if (currentTimeVal < morningStart) {
-      statusText = 'MORNING BATCH OPENS AT 05:30 AM TODAY';
+      statusText = 'MORNING BATCH OPENS AT 05:30 AM';
     } else if (currentTimeVal >= morningEnd && currentTimeVal < eveningStart) {
-      statusText = 'AFTERNOON RECOVERY • EVENING BATCH OPENS AT 04:30 PM';
+      statusText = 'AFTERNOON BREAK • REOPENS AT 04:30 PM';
     } else {
-      statusText = 'EVENING BATCH CONCLUDED • DOORS REOPEN AT 05:30 AM';
+      statusText = 'EVENING CONCLUDED • REOPENS AT 05:30 AM';
     }
   }
 
