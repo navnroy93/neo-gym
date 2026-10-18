@@ -797,21 +797,30 @@
                   <!-- Row 2: Manual Numerical Metrics (Blank Values with Placeholders, Units in Label) -->
                   <div class="bmi-metrics-grid">
                     <div class="bmi-field">
-                      <label for="bmiAge" class="bmi-field-label">Age <span class="bmi-unit">(yrs)</span></label>
+                      <label for="bmiAge" class="bmi-field-label">
+                        <span class="bmi-label-text">Age</span>
+                        <span class="bmi-unit">(yrs)</span>
+                      </label>
                       <div class="bmi-input-wrap">
                         <input type="number" id="bmiAge" value="" placeholder="25" inputmode="numeric" oninput="liveUpdateBMI()">
                       </div>
                     </div>
 
                     <div class="bmi-field">
-                      <label for="bmiHeight" class="bmi-field-label">Height <span class="bmi-unit">(cm)</span></label>
+                      <label for="bmiHeight" class="bmi-field-label">
+                        <span class="bmi-label-text">Height</span>
+                        <span class="bmi-unit">(cm)</span>
+                      </label>
                       <div class="bmi-input-wrap">
                         <input type="number" id="bmiHeight" value="" placeholder="180" inputmode="decimal" step="any" oninput="liveUpdateBMI()">
                       </div>
                     </div>
 
                     <div class="bmi-field">
-                      <label for="bmiWeight" class="bmi-field-label">Weight <span class="bmi-unit">(kg)</span></label>
+                      <label for="bmiWeight" class="bmi-field-label">
+                        <span class="bmi-label-text">Weight</span>
+                        <span class="bmi-unit">(kg)</span>
+                      </label>
                       <div class="bmi-input-wrap">
                         <input type="number" id="bmiWeight" value="" placeholder="65" inputmode="decimal" step="any" oninput="liveUpdateBMI()">
                       </div>

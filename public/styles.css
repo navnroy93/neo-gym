@@ -2296,35 +2296,50 @@ input[type="file"]::file-selector-button:hover {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-  align-items: end; /* Ensures all inputs anchor to the exact same baseline */
+  align-items: stretch;
 }
 
 .bmi-field {
   min-width: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; /* Locks input wrap to bottom regardless of label height */
+  justify-content: flex-end;
 }
 
 .bmi-metrics-grid .bmi-field-label {
-  min-height: 32px;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 6px;
-  line-height: 1.2;
+  height: 38px;
+  min-height: 38px;
+  margin-bottom: 8px;
+  line-height: 1.15;
+}
+
+.bmi-label-text {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  display: block;
 }
 
 .bmi-unit {
-  font-size: 0.72em;
-  opacity: 0.85;
-  margin-left: 2px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold-primary);
+  opacity: 0.9;
+  display: block;
 }
 
 .bmi-input-wrap {
   position: relative;
   width: 100%;
+  margin-top: auto;
 }
 
 /* CRITICAL: Remove all browser spinner buttons */
@@ -3400,23 +3415,37 @@ input[type="number"] {
 
 .bot-input-area input {
   flex-grow: 1;
-  min-height: 42px;
-  padding: 8px 14px;
-  font-size: 0.88rem;
-  border-radius: var(--radius-xs);
+  min-height: 44px;
+  height: 44px;
+  padding: 10px 16px;
+  font-size: 0.94rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-pill);
+  color: var(--text-main);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bot-input-area input:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 2px var(--gold-muted);
 }
 
 .bot-send-btn {
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-xs);
-  background: var(--gold-primary);
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  background: var(--gold-gradient);
   color: #060709;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
   transition: var(--transition-fast);
 }
 .bot-send-btn:hover {
@@ -3671,12 +3700,7 @@ input[type="number"] {
     box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
   }
 
-  .bot-window {
-    right: 10px;
-    left: 10px;
-    width: auto;
-    bottom: 70px;
-  }
+  /* Mobile bot-window handles fixed viewport */
 }
 
 /* ==========================================================================
@@ -3780,12 +3804,7 @@ input[type="number"] {
     border-radius: 50%;
   }
 
-  .bot-window {
-    right: 12px;
-    left: 12px;
-    width: auto;
-    bottom: 76px;
-  }
+  /* Mobile bot-window handles fixed viewport */
 }
 
 /* ==========================================================================
@@ -4854,4 +4873,114 @@ input[type="number"] {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ==========================================================================
+   MASTER MOBILE AI BOT & INPUT BASELINE SYSTEM
+   ========================================================================== */
+@media (max-width: 768px) {
+  .gym-bot-wrapper {
+    position: fixed !important;
+    bottom: 18px !important;
+    right: 18px !important;
+    z-index: 990 !important;
+  }
+
+  .bot-trigger-btn {
+    width: 46px !important;
+    height: 46px !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+  }
+
+  .bot-badge-text {
+    display: none !important;
+  }
+
+  /* CRITICAL: Bot Window occupies fixed mobile viewport sheet, NOT crushed 24px! */
+  .bot-window {
+    position: fixed !important;
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    top: auto !important;
+    width: auto !important;
+    max-width: 460px !important;
+    margin: 0 auto !important;
+    height: min(600px, 82vh) !important;
+    max-height: 82vh !important;
+    border-radius: 18px !important;
+    z-index: 10000 !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.92), 0 0 0 1px var(--gold-border) !important;
+  }
+
+  .gym-bot-wrapper.bot-active .bot-trigger-btn {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: scale(0.8) !important;
+  }
+
+  .bot-input-area {
+    padding: 12px 14px !important;
+    background: var(--bg-elevated) !important;
+    gap: 8px !important;
+  }
+
+  .bot-input-area input {
+    font-size: 16px !important; /* Prevents auto-zoom on mobile */
+    min-height: 46px !important;
+    height: 46px !important;
+  }
+
+  .bot-send-btn {
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+  }
+}
+
+/* Light Theme High-Contrast Polish for BMI Inputs */
+[data-theme="light"] .bmi-inputs-panel {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.12) !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04) !important;
+}
+
+[data-theme="light"] .bmi-input-wrap input {
+  background: #f8fafc !important;
+  border: 1px solid rgba(15, 23, 42, 0.22) !important;
+  color: #090d16 !important;
+}
+
+[data-theme="light"] .bmi-input-wrap input:focus {
+  background: #ffffff !important;
+  border-color: var(--gold-primary) !important;
+  box-shadow: 0 0 0 2px var(--gold-muted) !important;
+}
+
+[data-theme="light"] .bmi-label-text {
+  color: #334155 !important;
+}
+
+[data-theme="light"] .bot-window {
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.14) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(179, 130, 14, 0.3) !important;
+}
+
+[data-theme="light"] .bot-window-header {
+  background: #f8fafc !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+[data-theme="light"] .bot-input-area {
+  background: #f8fafc !important;
+  border-top: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+[data-theme="light"] .bot-input-area input {
+  background: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.16) !important;
+  color: #0f172a !important;
 }

@@ -353,16 +353,26 @@ function toggleGymBot() {
   if (!botWindow) return;
   const isHidden = botWindow.style.display === 'none' || botWindow.style.display === '';
   botWindow.style.display = isHidden ? 'flex' : 'none';
+  if (gymBotWrapper) {
+    if (isHidden) {
+      gymBotWrapper.classList.add('bot-active');
+    } else {
+      gymBotWrapper.classList.remove('bot-active');
+    }
+  }
   if (isHidden && botInput) {
-    setTimeout(() => botInput.focus(), 200);
+    setTimeout(() => botInput.focus(), 250);
   }
 }
 
 function openGymBot() {
   if (!botWindow) return;
   botWindow.style.display = 'flex';
+  if (gymBotWrapper) {
+    gymBotWrapper.classList.add('bot-active');
+  }
   if (botInput) {
-    setTimeout(() => botInput.focus(), 200);
+    setTimeout(() => botInput.focus(), 250);
   }
 }
 
@@ -1483,3 +1493,13 @@ document.addEventListener('DOMContentLoaded', () => {
   calculateBMI();
 });
 setTimeout(calculateBMI, 400);
+
+// Close Bot on click outside
+document.addEventListener('click', (e) => {
+  if (!botWindow || botWindow.style.display === 'none') return;
+  if (!gymBotWrapper) return;
+  if (!gymBotWrapper.contains(e.target)) {
+    botWindow.style.display = 'none';
+    gymBotWrapper.classList.remove('bot-active');
+  }
+});
